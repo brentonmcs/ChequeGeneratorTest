@@ -1,0 +1,35 @@
+﻿@using System.Globalization
+@model SPHealthChequeConverter.Models.ChequeDisplayDetails
+
+@{
+    ViewBag.Title = "Processed Cheque"; 
+}
+
+@section Style {
+    <link href="~/Content/cheque.css" rel="stylesheet" />
+}
+
+<div id="imageContainer">
+    <img id="image" src="~/Content/cheque_image.jpg" alt="" />
+    <p id="amount" class="chequeText">@string.Format("{0:0.00}", @Model.Amount) </p>
+    <p id="name" class="chequeText">@Html.DisplayFor(x => x.Name)</p>
+    @{
+        var day = Model.Date.Day.ToString(CultureInfo.InvariantCulture).PadLeft(2, '0');
+        var month = Model.Date.Month.ToString(CultureInfo.InvariantCulture).PadLeft(2, '0');
+        var year = Model.Date.Year.ToString(CultureInfo.InvariantCulture);
+        <p id="dateDay1" class="chequeText chequeDate">@day[0]</p>
+        <p id="dateDay2" class="chequeText chequeDate">@day[1]</p>
+    
+        <p id="dateMonth1" class="chequeText chequeDate">@month[0]</p>
+        <p id="dateMonth2" class="chequeText chequeDate">@month[1]</p>
+    
+        <p id="dateYear1" class="chequeText chequeDate">@year[0]</p>
+        <p id="dateYear2" class="chequeText chequeDate">@year[1]</p>
+        <p id="dateYear3" class="chequeText chequeDate">@year[2]</p>
+        <p id="dateYear4" class="chequeText chequeDate">@year[3]</p>
+    }
+    <p id="amounttext" class="chequeText">@Html.DisplayFor(x => x.AmountInWords)</p>
+</div>
+
+@Html.ActionLink("Back to Home", "Index")
+

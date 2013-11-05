@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPHealthChequeConverter", "SPHealthChequeConverter\SPHealthChequeConverter.csproj", "{4E99F545-8D8A-4122-915F-E6BE6ADEAB47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPHealthChequeConverter.Tests", "SPHealthChequeConverter.Tests\SPHealthChequeConverter.Tests.csproj", "{E7DB70A5-9C04-4AB4-AEB9-7A5258A49B14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E99F545-8D8A-4122-915F-E6BE6ADEAB47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E99F545-8D8A-4122-915F-E6BE6ADEAB47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E99F545-8D8A-4122-915F-E6BE6ADEAB47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E99F545-8D8A-4122-915F-E6BE6ADEAB47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7DB70A5-9C04-4AB4-AEB9-7A5258A49B14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7DB70A5-9C04-4AB4-AEB9-7A5258A49B14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7DB70A5-9C04-4AB4-AEB9-7A5258A49B14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7DB70A5-9C04-4AB4-AEB9-7A5258A49B14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

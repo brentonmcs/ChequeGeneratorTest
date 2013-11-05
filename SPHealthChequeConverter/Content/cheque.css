@@ -1,0 +1,72 @@
+﻿ #imageContainer {
+        position: relative;
+        height: 350px;
+    }
+     #image {
+         position: absolute;
+         left: 0;
+         top: 0;
+     }
+
+    .chequeText {
+        z-index: 100;
+        position: absolute;
+        color: rgb(88, 80, 73);
+        font-size: 20px;
+    }
+
+    #amount {
+        left: 560px;
+        top: 100px;
+        text-align: right;
+        width: 100px;
+    }
+
+    .chequeDate {
+        font-size: 18px;
+        text-align: right;
+        top: 56px;
+    }
+
+    #name {
+        top: 95px;
+        left: 80px;
+        width: 400px;
+    }
+    
+    #amounttext {
+        font-size: 14px;
+        top: 134px;
+        left: 25px;
+    }
+    #dateDay1 {
+        left: 515px;
+    }
+
+    #dateDay2 {
+        left: 530px;
+    }
+
+    #dateMonth1 {
+        left: 550px;
+    }
+
+    #dateMonth2 {
+        left: 570px;
+    }
+
+    #dateYear1 {
+        left: 590px;
+    }
+
+    #dateYear2 {
+        left: 610px;
+    }
+
+    #dateYear3 {
+        left: 630px;
+    }
+
+    #dateYear4 {
+        left: 650px;
+    }

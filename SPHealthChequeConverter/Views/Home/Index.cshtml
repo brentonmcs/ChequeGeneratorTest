@@ -1,0 +1,66 @@
+﻿@model SPHealthChequeConverter.Models.ChequeSubmitDetails
+
+@{
+    ViewBag.Title = "Cheque Creator";    
+}
+
+
+@using (Html.BeginForm("Create", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.Name, new { @class = "col-sm-4 control-label" })
+        <div class="col-sm-4">
+            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        </div>
+        <div class="col-sm-4">
+            @Html.ValidationMessageFor(x => x.Name)
+        </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(x => x.Amount, new { @class = "col-sm-4 control-label" })
+        <div class="col-sm-4">
+            @Html.TextBoxFor(x => x.Amount, new { @class = "form-control" })
+        </div>
+        <div class="col-sm-4">
+            @Html.ValidationMessageFor(x => x.Amount)
+        </div>
+    </div>
+ 
+    <div class="form-group">
+        @Html.LabelFor(x => x.Date, new { @class = "col-sm-4 control-label" })
+
+        <div class="col-sm-4 date">            
+            @Html.TextBoxFor(x=>x.Date, new {id="Date", @class = "datepicker", data_week_start = "4", data_format = "dd-mm-yyyy" })
+        </div>
+        <div class="col-sm-4">
+            @Html.ValidationMessageFor(x => x.Date)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-10">
+            <button id="Create" type="submit" class="btn btn-default">Create</button>
+        </div>
+    </div>    
+}
+
+@section Scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $.culture = Globalize.culture("en-GB");
+            $.validator.methods.date = function(value, element) {
+                //This is not ideal but Chrome passes dates through in ISO1901 format regardless of locale 
+                //and despite displaying in the specified format.
+
+                return this.optional(element)
+                    || Globalize.parseDate(value, "dd/mm/yyyy", "en-GB")
+                    || Globalize.parseDate(value, "yyyy-mm-dd");
+
+            };
+            $('#Date').datepicker({ format: 'dd/mm/yyyy' });
+        });
+
+    </script>
+    }
